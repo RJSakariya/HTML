@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weekly-3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav>
+
+        </nav>
+        <header>
+            <div class="container-fluid con p-0">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center header">
+                        <div class="h_1 col-sm-8 col-md-6 col-lg-4">
+                            <button class="menu_toggle">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <input type="text" class="search_box" placeholder="Search">
+                        </div>
+                        <div class="h_2 d-flex align-items-center justify-content-end col-sm-4 col-md-6 col-lg-8">
+                            <button class="message">
+                                <i class="fa fa-envelope"></i>
+                            </button>
+                            <span class="ms-2 me-3 mes d-none d-lg-block">Message <i
+                                    class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                            <button class="notification">
+                                <i class="fa fa-bell"></i>
+                            </button>
+                            <span class="ms-2 me-3 not d-none d-lg-block">Notification <i
+                                    class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                            <button class="user">
+                                <i class="fa fa-user"></i>
+                            </button>
+                            <span class="ms-2 use d-none d-lg-block">User name <i class="fa-solid fa-chevron-down ms-1"
+                                    style="font-size: 10px;"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script>
+    setTimeout(function () {
+        location.reload();
+    }, 1000);
+    $(document).ready(function () {
+        $('.menu_toggle').click(function () {
+            $('nav').toggleClass('hide_nav');
+            $('header').toggleClass('incrise_width');
+            $('main').toggleClass('incrise_width');
+        });
+        if ($(window).width() > 1200) {
+            $('header').removeClass('col-12');
+        }
+        else {
+            $('header').addClass('col-12');
+        }
+    });
+</script>

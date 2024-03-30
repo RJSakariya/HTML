@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #6C7293;
+    background-color: #191c24;
+    transition: all 0.5s linear;
+}
+.hide_nav{
+    width: 0px;
+    transition: all 0.5s linear;
+}
+header{
+    width: calc(100% - 250px);
+    height: 64px;
+    color: #6C7293;
+    background-color: #191c24;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 0px 24px;
+    transition: all 0.5s linear;
+}
+main{
+    height: calc(100vh - 64px);
+    width: calc(100% - 250px);
+    background-color: black;
+    position: fixed;
+    right: 0px;
+    top: 64px;
+    transition: all 0.5s linear;
+}
+.incrise_width{
+    width: 100%;
+    transition: all 0.5s linear;
+}
+.con{
+    height: 64px;
+}
+
+.header{
+    height: 64px;
+    width: 100%;
+    padding: 0px 12px;
+}
+.menu_toggle,.message,.notification,.user{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: blue;
+    border-radius: 50%;
+    border: none;
+}
+.message,.notification,.user{
+    color: #6C7293;
+}
+.search_box{
+    height: 40px;
+    width: 200px;
+    margin-left: 20px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    outline: none;
+    color: #6C7293;
+}
+.search_box:focus{
+    outline: 4px solid #0000ff31;
+}
+.h_2{
+    width: calc(100% - 265px);
+    height: 40px;
+}
