@@ -30,28 +30,28 @@
             <div class="container-fluid con p-0">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-between align-items-center header">
-                        <div class="h_1 col-sm-8 col-md-6 col-lg-4">
+                        <div class="h_1 col-5 col-sm-8 col-md-6 col-lg-4">
                             <button class="menu_toggle">
                                 <i class="fa fa-bars"></i>
                             </button>
-                            <input type="text" class="search_box" placeholder="Search">
+                            <input type="text" class="search_box d-none d-md-block" placeholder="Search">
                         </div>
                         <div class="h_2 d-flex align-items-center justify-content-end col-sm-4 col-md-6 col-lg-8">
                             <button class="message">
                                 <i class="fa fa-envelope"></i>
                             </button>
-                            <span class="ms-2 me-3 mes d-none d-lg-block">Message <i
-                                    class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                            <span class="ms-2 mes d-none d-lg-block">Message</span>
+                            <i class="fa-solid fa-chevron-down ms-1 me-3" style="font-size: 10px;"></i>
                             <button class="notification">
                                 <i class="fa fa-bell"></i>
                             </button>
-                            <span class="ms-2 me-3 not d-none d-lg-block">Notification <i
-                                    class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                            <span class="ms-2 not d-none d-lg-block">Notification</span>
+                            <i class="fa-solid fa-chevron-down ms-1 me-3" style="font-size: 10px;"></i>
                             <button class="user">
                                 <i class="fa fa-user"></i>
                             </button>
-                            <span class="ms-2 use d-none d-lg-block">User name <i class="fa-solid fa-chevron-down ms-1"
-                                    style="font-size: 10px;"></i></span>
+                            <span class="ms-2 use d-none d-lg-block">User name</span>
+                            <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i>
                         </div>
                     </div>
                 </div>
@@ -66,20 +66,17 @@
 </html>
 
 <script>
-    setTimeout(function () {
-        location.reload();
-    }, 1000);
     $(document).ready(function () {
         $('.menu_toggle').click(function () {
             $('nav').toggleClass('hide_nav');
             $('header').toggleClass('incrise_width');
             $('main').toggleClass('incrise_width');
         });
-        if ($(window).width() > 1200) {
-            $('header').removeClass('col-12');
+        if ($(window).width() < 1200) {
+            $('header').addClass('col-12');
         }
         else {
-            $('header').addClass('col-12');
+            $('header').removeClass('col-12');
         }
     });
 </script>
